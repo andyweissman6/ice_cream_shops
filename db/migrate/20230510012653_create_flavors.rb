@@ -4,7 +4,7 @@ class CreateFlavors < ActiveRecord::Migration[7.0]
       t.string :flavor_name
       t.boolean :vegan
       t.integer :grams_sugar
-      t.references :ice_cream_shop, null: false, foreign_key: true
+      t.references :ice_cream_shop, foreign_key: true
 
       t.timestamps
     end
