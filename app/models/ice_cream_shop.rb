@@ -1,3 +1,3 @@
-class IceCreamShop < ActiveRecord::Base
+class IceCreamShop < ApplicationRecord
   has_many :flavors
 end
