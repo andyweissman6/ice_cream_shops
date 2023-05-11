@@ -1,3 +1,3 @@
 class Flavor < ApplicationRecord
-  belongs_to :IceCreamShop
+  belongs_to :ice_cream_shop
 end
