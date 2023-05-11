@@ -22,7 +22,7 @@ Table --> flavors
 [ ] done
 
 User Story 1, Parent Index 
-
+#parents index
 For each parent table
 As a visitor
 When I visit '/parents'
