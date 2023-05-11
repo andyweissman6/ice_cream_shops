@@ -19,9 +19,9 @@ Table --> flavors
 - grams_sugar:integer
 - ice_cream_shop_id:integer (FOREIGN KEY)
 
-[ ] done
+[X] done
 
-User Story 1, Parent Index 
+User Story 1, Parent Index #shows ALL records of one model. All IceCreamShops
 #parents index
 For each parent table
 As a visitor
@@ -29,7 +29,7 @@ When I visit '/parents'
 Then I see the name of each parent record in the system
 [ ] done
 
-User Story 2, Parent Show 
+User Story 2, Parent Show # shows all info for ONE model
 
 As a visitor
 When I visit '/parents/:id'
