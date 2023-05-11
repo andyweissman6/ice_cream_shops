@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe "/ice_cream_shops/:id (IceCreamShop Show page)", type: :feature do
   #User Story 2
-  describe "as a visitor, when I visit IceCreamShop index page" do
+  describe "as a visitor, when I visit specific id IceCreamShop page" do
     let!(:sprinkles) {IceCreamShop.create!(name: "Sprinkles",
                                         open_24_hrs: true,
                                         num_employees: 6) }
