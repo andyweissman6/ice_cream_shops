@@ -24,7 +24,7 @@ RSpec.describe "/flavors (Flavors Index page)", type: :feature do
       expect(page).to have_content(snozzberry.flavor_name)
       expect(page).to have_content(snozzberry.vegan)
       expect(page).to have_content(snozzberry.grams_sugar)
-      save_and_open_page
+      # save_and_open_page
     end
   end
 end
