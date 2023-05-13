@@ -14,7 +14,7 @@ RSpec.describe "/ice_cream_shops/:id (IceCreamShop Show page)", type: :feature d
     it "see the parent with that id including the parent's attributes" do
       visit "/ice_cream_shops/#{sprinkles.id}"
       # visit "/ice_cream_shops/#{nugs.id}"
-save_and_open_page
+# save_and_open_page
       expect(page).to have_content(sprinkles.name)
       expect(page).to have_content(sprinkles.open_24_hrs)
       expect(page).to have_content(sprinkles.num_employees)
