@@ -11,6 +11,14 @@ RSpec.describe "/ice_cream_shops/:id (IceCreamShop Show page)", type: :feature d
                                     open_24_hrs: false,
                                     num_employees: 3) }
 
+    let!(:vanilla) {sprinkles.flavors.create!(  flavor_name: "vanilla",
+                                      vegan: true,
+                                      grams_sugar: 50 )}
+    
+    let!(:snozzberry) {sprinkles.flavors.create!( flavor_name: "snozzberry",
+                                        vegan: false,
+                                        grams_sugar: 69 )}
+
     it "see the parent with that id including the parent's attributes" do
       visit "/ice_cream_shops/#{sprinkles.id}"
       # visit "/ice_cream_shops/#{nugs.id}"
@@ -22,6 +30,12 @@ RSpec.describe "/ice_cream_shops/:id (IceCreamShop Show page)", type: :feature d
       expect(page).to_not have_content(nugs.name)
       expect(page).to_not have_content(nugs.open_24_hrs)
       expect(page).to_not have_content(nugs.num_employees)
+    end
+
+    it "see a count of the number of flavors associated with this ice cream shop" do
+      visit "/ice_cream_shops/#{sprinkles.id}"
+      expect(page).to have_content("Total number of flavors: 2")
+      save_and_open_page
     end
   end
 end
