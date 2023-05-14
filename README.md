@@ -19,7 +19,7 @@ Table --> flavors
 - grams_sugar:integer
 - ice_cream_shop_id:integer (FOREIGN KEY)
 
-[X] done
+
 
 User Story 1, Parent Index #shows ALL records of one model. All IceCreamShops
 #parents index
@@ -43,7 +43,7 @@ As a visitor
 When I visit '/child_table_name'
 Then I see each Child in the system including the Child's attributes
 (data from each column that is on the child table)
-[ ] done
+[X] done
 
 User Story 4, Child Show 
 
@@ -51,7 +51,7 @@ As a visitor
 When I visit '/child_table_name/:id'
 Then I see the child with that id including the child's attributes
 (data from each column that is on the child table)
-[ ] done
+[X] done
 
 User Story 5, Parent Children Index 
 
@@ -60,7 +60,7 @@ When I visit '/parents/:parent_id/child_table_name'
 Then I see each Child that is associated with that Parent with each Child's attributes
 (data from each column that is on the child table)
 ActiveRecord
-[ ] done
+[X] done
 
 User Story 6, Parent Index sorted by Most Recently Created 
 

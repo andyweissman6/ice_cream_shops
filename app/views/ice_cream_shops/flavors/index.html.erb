@@ -1,0 +1,6 @@
+<h1>Flavors Index for <%= @ice_cream_shop.name %></h1>
+<% @flavors.each do |flavor| %>
+  <p>Flavor Name: <%= flavor.flavor_name %></p>
+  <p>Vegan: <%= flavor.vegan %></p>
+  <p>Grams of Sugar: <%= flavor.grams_sugar %></p>
+  <% end %>
