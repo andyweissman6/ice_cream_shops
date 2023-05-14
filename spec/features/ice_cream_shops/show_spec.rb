@@ -35,7 +35,6 @@ RSpec.describe "/ice_cream_shops/:id (IceCreamShop Show page)", type: :feature d
     it "see a count of the number of flavors associated with this ice cream shop" do
       visit "/ice_cream_shops/#{sprinkles.id}"
       expect(page).to have_content("Total number of flavors: 2")
-      save_and_open_page
     end
   end
 end
