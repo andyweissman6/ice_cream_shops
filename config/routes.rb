@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get "/flavors", to: "flavors#index"
   get "/flavors/:id", to: "flavors#show"
   get "/ice_cream_shops/:id/flavors", to: "ice_cream_shops/flavors#index"
+  get "/", to: "flavors#index"
   # can also write it like:
   # "/ice_cream_shops/:ice_cream_shop_id/flavors", to: "ice_cream_shops/flavors#index"
   # in pry --> params: will see :ice_cream_shop_id = number

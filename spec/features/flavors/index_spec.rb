@@ -26,5 +26,10 @@ RSpec.describe "/flavors (Flavors Index page)", type: :feature do
       expect(page).to have_content(snozzberry.grams_sugar)
       # save_and_open_page
     end
+
+    it "I see a link at the top of the page that takes me to the Flavors Index" do
+      visit "/"
+      expect(page).to have_link("Flavors Index", href: "/flavors")
+    end
   end
 end
