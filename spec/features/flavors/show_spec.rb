@@ -17,7 +17,7 @@ RSpec.describe "/ice_cream_shops/:id (Flavor Show page)", type: :feature do
       expect(page).to have_content(vanilla.flavor_name)
       expect(page).to have_content(vanilla.vegan)
       expect(page).to have_content(vanilla.grams_sugar)
-      save_and_open_page
+      # save_and_open_page
     end
   end
 end
