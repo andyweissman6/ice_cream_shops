@@ -1,3 +1,10 @@
-<% @ice_cream_shops.each do |shop| %>
-  <p><%= shop.name %></p>
-<% end %>
+<h1>Ice Cream Shops Index Page</h1> 
+<ul>
+  <% @ice_cream_shops.each do |shop| %>
+    <li>
+    <%= shop.name %></p>
+    <br>
+    Created at: <%= shop.created_at%>
+    </li>
+  <% end %>
+</ul>
