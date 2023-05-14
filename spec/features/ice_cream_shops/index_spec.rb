@@ -11,11 +11,18 @@ RSpec.describe "/ice_cream_shops (IceCreamShop Index page)", type: :feature do
                                     open_24_hrs: false,
                                     num_employees: 3) }
 
-    it "should see the name of each parent record" do
+    it "should see the name of each Ice Cream Shop record" do
       visit "/ice_cream_shops"
-
       expect(page).to have_content(sprinkles.name)
       expect(page).to have_content(nugs.name)
+    end
+
+    it "I see that records are ordered by most recently created first and next to each of the records I see when it was created" do
+      visit "/ice_cream_shops"
+        expect(page).to have_content(sprinkles.name)
+        expect(page).to have_content(nugs.name)
+        expect(page).to have_content(sprinkles.created_at)
+        expect(page).to have_content(nugs.created_at)
     end
   end
 end
