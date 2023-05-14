@@ -24,5 +24,10 @@ RSpec.describe "/ice_cream_shops (IceCreamShop Index page)", type: :feature do
         expect(page).to have_content(sprinkles.created_at)
         expect(page).to have_content(nugs.created_at)
     end
+
+    it "see a link at the top of the page that takes me to the Ice Cream Shops Index" do
+      visit "/"
+      expect(page).to have_link("Ice Cream Shops Index", href: "/ice_cream_shops")
+    end
   end
 end
