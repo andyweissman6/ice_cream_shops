@@ -1,6 +1,6 @@
 class IceCreamShopsController < ApplicationController
   def index
-    @ice_cream_shops = IceCreamShop.all
+    @ice_cream_shops = IceCreamShop.order(created_at: :desc)
   end
 
   def show
