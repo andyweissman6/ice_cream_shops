@@ -8,5 +8,11 @@
 
 sprinkles = IceCreamShop.create!(name: "Sprinkles", open_24_hrs: true, num_employees: 6)
 nugs = IceCreamShop.create!(name: "Nugs", open_24_hrs: false, num_employees: 3)
+
 vanilla = sprinkles.flavors.create!(flavor_name: "vanilla", vegan: true, grams_sugar: 50)
 snozzberry = sprinkles.flavors.create!(flavor_name: "snozzberry", vegan: false, grams_sugar: 69)
+dankberry_crunch = sprinkles.flavors.create!(flavor_name: "dankberry crunch", vegan: true, grams_sugar: 22)
+skittlez = sprinkles.flavors.create!(flavor_name: "skittlez", vegan: false, grams_sugar: 100)
+
+snozzberry = nugs.flavors.create!(flavor_name: "snozzberry", vegan: false, grams_sugar: 69)
+choco_chonk = nugs.flavors.create!(flavor_name: "choco-chonk", vegan: false, grams_sugar: 81 )
