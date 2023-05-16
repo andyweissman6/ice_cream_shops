@@ -1,0 +1,12 @@
+<%= form_with url: "/ice_cream_shops/#{@ice_cream_shop.id}", method: :patch, local: true do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+  <br>
+  <%= form.label :open_24_hrs %>
+  <%= form.check_box :open_24_hrs %>
+  <br>
+  <%= form.label :num_employees %>
+  <%= form.number_field :num_employees %>
+  <br>
+  <%= form.submit "Update and Submit" %>
+<% end %>
