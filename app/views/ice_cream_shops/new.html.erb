@@ -1,0 +1,14 @@
+<%= form_with url: "/ice_cream_shops/new", method: :post, local: :true do |form| %>
+  <br>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+  <br>
+  <%= form.label :open_24_hrs %>
+  <%= form.text_field :open_24_hrs %>
+  <br>
+  <%= form.label :num_employees %>
+  <%= form.text_field :num_employees %>
+  <br>
+  <%= form.submit "Create Ice Cream Shop"%> 
+
+<% end %>
