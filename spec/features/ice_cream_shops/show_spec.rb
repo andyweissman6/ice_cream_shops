@@ -40,7 +40,6 @@ RSpec.describe "/ice_cream_shops/:id (IceCreamShop Show page)", type: :feature d
     it "see a link to take me to that ice cream shop's `flavor` page ('/ice_cream_shops/:id/flavors')" do
       visit "/ice_cream_shops/#{sprinkles.id}"
       expect(page).to have_link("This Shop's Flavors", href: "/ice_cream_shops/#{sprinkles.id}/flavors")
-
     end
   end
 end

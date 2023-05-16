@@ -6,12 +6,14 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
+
+
 sprinkles = IceCreamShop.create!(name: "Sprinkles", open_24_hrs: true, num_employees: 6)
 nugs = IceCreamShop.create!(name: "Nugs", open_24_hrs: false, num_employees: 3)
 
 vanilla = sprinkles.flavors.create!(flavor_name: "vanilla", vegan: true, grams_sugar: 50)
 snozzberry = sprinkles.flavors.create!(flavor_name: "snozzberry", vegan: false, grams_sugar: 69)
-dankberry_crunch = sprinkles.flavors.create!(flavor_name: "dankberry crunch", vegan: true, grams_sugar: 22)
+pbs = sprinkles.flavors.create!(flavor_name: "Pizza Bagel Swirl", vegan: false, grams_sugar: 420)
 skittlez = sprinkles.flavors.create!(flavor_name: "skittlez", vegan: false, grams_sugar: 100)
 
 snozzberry = nugs.flavors.create!(flavor_name: "snozzberry", vegan: false, grams_sugar: 69)
