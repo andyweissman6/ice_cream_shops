@@ -29,5 +29,24 @@ RSpec.describe "/ice_cream_shops (IceCreamShop Index page)", type: :feature do
       visit "/"
       expect(page).to have_link("Ice Cream Shops Index", href: "/ice_cream_shops")
     end
+
+    it "see a link to create a new Parent record, 'New Parent'" do
+      visit "/ice_cream_shops"
+      expect(page).to have_link("New Ice Cream Shop", href: "/ice_cream_shops/new")
+      click_link("New Ice Cream Shop")
+      expect(current_path).to eq("/ice_cream_shops/new")
+
+      fill_in "name", with: "Dave's Scoops"
+      fill_in "open_24_hrs", with: false
+      fill_in "num_employees", with: 4
+
+      click_button "Create Ice Cream Shop"
+
+      expect(current_path).to eq("/ice_cream_shops")
+      expect(page).to have_content("New Ice Cream Shop")
+
+
+
+    end
   end
 end
